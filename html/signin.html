@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHaven - Sign In</title>
+    <link rel="icon" type="img/icon" href="img/iconr.png">
+    <link rel="stylesheet" href="css/stylesr.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url('img/backgroundr.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: transparent;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        margin-left: 2rem;
+      }
+
+      .logo img {
+        width: 250px;
+      }
+
+      .nav-links {
+        margin-right: 2rem;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+      }
+
+      .main-container {
+        background: white;
+        border-radius: 30px;
+        max-width: 1200px;
+        width: 100%;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .inner-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-radius: 30px;
+      }
+
+      .form-section {
+        width: 50%;
+        padding: 2rem;
+        text-align: left;
+        background-color: #ffffff;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+
+      .welcome-section {
+        width: 50%;
+        padding: 2rem;
+        text-align: center;
+        background-color: #418ADE;
+        color: white;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .welcome-section button {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 150px;
+      }
+
+      .welcome-section button:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      h1,
+      h3 {
+        margin: 0 0 1rem;
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        margin-top: 1rem;
+        width: 100%;
+        font-weight: bold;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        font-weight: bold;
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        width: 100%;
+        max-width: auto;
+      }
+
+      button {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .form-section .logo {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logor.png" alt="BookHaven Logo">
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="feature.html">Features</a>
+        <a href="library-hours.html">Library Hours</a>
+        <a href="#">Help/FAQ</a>
+        <a href="#">Ask a Librarian</a>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="inner-container">
+        <div class="form-section">
+          <div class="logo">
+            <img src="img/logor.png" alt="BookHaven Logo">
+          </div>
+          <h3>Sign in to continue to BOOKHAVEN</h3>
+          <form action="auth.php" method="post" id="signin-form">
+            <input type="hidden" name="action" value="signin">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="email@sample.com" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="************" required>
+            <button type="submit">SIGN IN</button>
+          </form>
+        </div>
+        <div class="welcome-section">
+          <h1>Hello, Friends!</h1>
+          <p>Enter your personal details and start reading with us</p>
+          <button onclick="location.href='signup.html'">SIGN UP</button>
+        </div>
+      </div>
+    </div>
+<script>
+  // Add event listener for signup form submission if it exists
+  document.querySelector('#signup-form')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    try {
+      const response = await fetch('auth.php', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await response.json();
+      if (data.status === 'success') {
+        alert(data.message);
+        window.location.href = 'signin.html'; // Redirect to sign-in after successful registration
+      } else {
+        alert(data.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred while submitting the form.');
+    }
+  });
+
+  // Add event listener for signin form submission
+  document.querySelector('#signin-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    try {
+      const response = await fetch('auth.php', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await response.json();
+      if (data.status === 'success') {
+        alert(data.message);
+        localStorage.setItem('token', data.token); // Store token for future requests
+        window.location.href = 'home.html'; // Redirect to home page after login
+      } else {
+        alert(data.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred while logging in.');
+    }
+  });
+</script>
+
+  </body>
+</html>

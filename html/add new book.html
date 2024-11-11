@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHaven - Add New Book</title>
+    <link rel="stylesheet" href="css/add-new-book.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a class="navbar-brand" href="home.html"><img div class="logo" src="img/logo.png" width="200" height="50" />
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="searchbook.html">Search Books</a></li>
+                <li><a href="returnbooks.html">Return Books</a></li>
+                <li><a href="borrowhistory.html">Borrow History</a></li>
+            </ul>
+        </nav>
+        <div class="account-head">
+            <span>Arriana</span>
+         </div>
+    </header>
+
+    <main class="content-wrapper">
+        <div class="back-link">
+            <a href="">← Back to results</a>
+        </div>
+        <section class="book-details">
+            <h2>Book Details</h2>
+            <div class="form">
+                <input type="text" placeholder="BOOK ID" id="book-id">
+                <input type="text" placeholder="BOOK NAME" id="book-name">
+                <input type="text" placeholder="PUBLISHER" id="publisher">
+                <input type="text" placeholder="PUBLISHING YEAR" id="year">
+                <input type="text" placeholder="AUTHOR" id="author">
+                <input type="text" placeholder="STATUS" id="status">
+            </div>
+        </section>
+
+        <section class="book-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Available</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="book-table">
+                    <tr>
+                        <td>054-218</td>
+                        <td>Extraordinary Means</td>
+                        <td>Robyn Scheidner</td>
+                        <td>20</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>054-219</td>
+                        <td>The Other Boy</td>
+                        <td>Cris John</td>
+                        <td>30</td>
+                        <td>Available</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="buttons">
+                <button id="save-btn">SAVE</button>
+                <button id="delete-btn">DELETE</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js\add-new-book.js"></script>
+</body>
+</html>

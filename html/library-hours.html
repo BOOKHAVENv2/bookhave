@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookhaven - Library Hours</title>
+    <link rel="icon" type="img/icon" href="img/iconr.png">
+    <link rel="stylesheet" href="css/stylesheetr.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url('img/backgroundr.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .navbar .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar .logo img {
+        width: 150px;
+      }
+
+      .navbar-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-links a:hover {
+        color: #007BFF;
+      }
+
+      .button-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .button-container button {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .button-container button:hover {
+        background-color: white;
+        color: #333;
+      }
+
+      .main-content {
+        margin-top: 120px;
+        padding: 4rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        justify-items: center;
+      }
+
+      .feature {
+        background: linear-gradient(135deg, #5C78C0, #2B385A);
+        color: white;
+        border-radius: 30px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        max-height: 200px;
+        padding: 3rem;
+        text-align: center;
+      }
+
+      .feature h1 {
+        margin-top: 0;
+        color: #FFD700;
+      }
+
+      .feature p {
+        margin: 1.5rem 0;
+        line-height: 1.6;
+        text-align: justify;
+      }
+
+      .day {
+        text-align: justify;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0.5;
+      }
+
+      .day span {
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a class="navbar-brand" href="index.html">
+        <img div class="logo" src="img/logor.png" width="200" height="50" />
+      </a>
+      <div class="navbar-links">
+        <a href="feature.html"> Features </a>
+        <a href="library-hours.html"> Library Hours </a>
+        <a href="help.html"> Help/FAQ </a>
+        <a href="ask-librarian.html"> Ask a Librarian</a>
+      </div>
+      <div class="button-container">
+        <button class="sign-in-button">
+          <a href="signin.html">Sign In</a>
+        </button>
+        <button class="librarian-button">
+          <a href="librarian-signin.html">Librarian</a>
+        </button>
+      </div>
+    </nav>
+    <div class="main-content">
+      <div class="feature">
+        <h1>Library Hours</h1>
+        <div class="day">SUNDAY <br>
+          <span>Opens 8:00 AM - 5:00 PM </span>
+        </div>
+        <div class="day">MONDAY <span>Opens 9:30 AM - 4:30 PM </span>
+        </div>
+        <div class="day">TUESDAY <span>Opens 9:30 AM - 4:30 PM </span>
+        </div>
+        <div class="day">WEDNESDAY <span>Opens 9:30 AM - 4:30 PM </span>
+        </div>
+        <div class="day">THURSDAY <span>Opens 9:30 AM - 4:30 PM </span>
+        </div>
+        <div class="day">FRIDAY <span>Opens 9:30 AM - 4:30 PM </span>
+        </div>
+        <div class="day">SATURDAY <span>Opens 8:00 AM - 5:00 PM </span>
+        </div>
+      </div>
+      <script>
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+        });
+        document.onkeydown = function(e) {
+          if (e.keyCode === 123) {
+            return false;
+          }
+          if (e.ctrlKey && e.shiftKey && e.keyCode === 'I'.charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.shiftKey && e.keyCode === 'J'.charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.shiftKey && e.keyCode === 'U'.charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.shiftKey && e.keyCode === 'C'.charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.shiftKey && e.keyCode === 'V'.charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.keyCode === 'V'.charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0)) {
+            return false;
+          }
+          if (e.ctrlKey && e.keyCode === 'A'.charCodeAt(0)) {
+            return false;
+          }
+        };
+        document.addEventListener('selectstart', function(e) {
+          e.preventDefault();
+        });
+        document.addEventListener('copy', function(e) {
+          e.preventDefault();
+        });
+      </script>
+  </body>
+</html>

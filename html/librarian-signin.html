@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarian - Sign In</title>
+    <link rel="icon" type="img/icon" href="img/iconr.png">
+    <link rel="stylesheet" href="css/stylesr.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url('img/backgroundr.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: transparent;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        margin-left: 2rem;
+      }
+
+      .logo img {
+        width: 250px;
+      }
+
+      .nav-links {
+        margin-right: 2rem;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+      }
+
+      .main-container {
+        background: white;
+        border-radius: 30px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-section {
+        width: 100%;
+        padding: 2rem;
+        text-align: left;
+        background-color: #ffffff;
+        border-radius: 15px;
+      }
+
+      h3 {
+        margin: 0 0 1rem;
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        margin-top: 1rem;
+        width: 100%;
+        font-weight: bold;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        font-weight: bold;
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        width: 100%;
+      }
+
+      button {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .form-section .logo {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logor.png" alt="Library Logo">
+        </a>
+      </div>
+      <!-- DO NOT EDIT
+      <div class="nav-links">
+        <a href="#">Library Hours</a>
+        <a href="#">Help/FAQ</a>
+        <a href="#">Ask a Librarian</a>
+      </div>
+        DO NOT EDIT -->
+    </div>
+    <div class="main-container">
+      <div class="form-section">
+        <div class="logo">
+          <img src="img/logor.png" alt="Library Logo">
+        </div>
+        <h3>Sign in to continue as Librarian</h3>
+        <form id="signin-form">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="librarian@email.com" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="************" required>
+          <button type="submit">SIGN IN</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      document.querySelector('#signin-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const formData = new FormData();
+        formData.append('action', 'signin');
+        formData.append('email', email);
+        formData.append('password', password);
+        const response = await fetch('auth.php', {
+          method: 'POST',
+          body: formData,
+        });
+        const data = await response.json();
+        if (data.status === 'success') {
+          alert(data.message);
+          localStorage.setItem('token', data.token); // Store token for future requests
+          window.location.href = '/protected.html'; // Redirect to protected page
+        } else {
+          alert(data.message);
+        }
+      });
+    </script>
+  </body>
+</html>

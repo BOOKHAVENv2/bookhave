@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHaven - Pending Books</title>
+    <link rel="stylesheet" href="css/pending-books.css">  
+    <link rel="icon" type="logo/icon" href="img/favicon.ico">    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a class="navbar-brand" href="home.html"><img div class="logo" src="img/bookhaven-logo.png" width="200" height="50" />
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="searchbook.html">Search Books</a></li>
+                <li><a href="returnbook.html">Return Books</a></li>
+                <li><a href="borrowhistor.html">Borrow History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+
+        <div class="back-link">
+            <a href="#">← Back to results</a>
+        </div>
+        <h2>BOOKHAVEN</h2>
+        <div class="book-sections">
+            <div class="section">
+                <h3><a href="#">Save List</a></h3>
+                <div class="book-card">
+                    <img src="img/book1.png" alt="The Other Boy">
+                    <div class="book-info">
+                        <p><strong>The Other Boy</strong></p>
+                        <p>Cris John, 2016</p>
+                        <p>5/5</p>
+                        <p>Request on<br>11 Mar 2023 09:00 AM</p>
+                        <span class="pending">Pending</span>
+                        <button class="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3><a href="#">Favourite</a></h3>
+                <div class="book-card">
+                    <img src="img/book2.png" alt="Harry Potter">
+                    <div class="book-info">
+                        <p><strong>Harry Potter</strong></p>
+                        <p>J.K. Rowling, 2002</p>
+                        <p>5/5</p>
+                        <p>Request on<br>11 Mar 2023 09:00 AM</p>
+                        <span class="pending">Pending</span>
+                        <button class="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3><a href="#">Borrowed Books</a></h3>
+                <div class="book-card">
+                    <img src="img/book3.png" alt="Infinity">
+                    <div class="book-info">
+                        <p><strong>Infinity</strong></p>
+                        <p>Jus Accardo, 2000</p>
+                        <p>4.7/5</p>
+                        <p>Request on<br>11 Mar 2023 09:00 AM</p>
+                        <span class="pending">Pending</span>
+                        <button class="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="pendings"><a href="#" class="pending-books">Pending Books</a></h3>
+            </div>
+        </div>
+    </main>
+
+    <div id="popupNotification" class="popup">
+        <p id="popupMessage">Request canceled!</p>
+    </div>
+
+</body>
+
+<script src="js/pending-books.js"></script>
+
+</html>

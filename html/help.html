@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookhaven - Help/FAQ</title>
+    <link rel="icon" type="img/icon" href="img/iconr.png">
+    <link rel="stylesheet" href="css/stylesheetr.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url('img/backgroundr.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .navbar .logo img {
+        width: 150px;
+      }
+
+      .navbar-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-links a:hover {
+        color: #007BFF;
+      }
+
+      .button-container button {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-right: 3.5rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .button-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .button-container button:hover {
+        background-color: white;
+        color: #333;
+      }
+
+      .main-content {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        padding: 4rem;
+      }
+
+      .faq-section {
+        background: linear-gradient(135deg, #5C78C0, #2B385A);
+        color: white;
+        border-radius: 30px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        max-width: 800px;
+        padding: 2rem;
+        text-align: left;
+      }
+
+      .faq-section h1 {
+        color: #FFD700;
+        text-align: center;
+      }
+
+      .faq-item {
+        margin-bottom: 1.5rem;
+      }
+
+      .faq-item h2 {
+        font-size: 1.2rem;
+        color: #FFD700;
+        cursor: pointer;
+        margin: 0;
+      }
+
+      .faq-item p {
+        font-size: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        margin: 0.5rem 0 0;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+      }
+
+      .faq-item.active p {
+        max-height: 200px;
+        /* Adjust as needed based on the content */
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo" src="img/logor.png" width="200" height="50" />
+      </a>
+      <div class="navbar-links">
+        <a href="feature.html"> Features </a>
+        <a href="library-hours.html"> Library Hours </a>
+        <a href="help.html"> Help/FAQ </a>
+        <a href="ask-librarian.html"> Ask a Librarian</a>
+      </div>
+      <div class="button-container">
+        <button class="sign-in-button">
+          <a href="signin.html">Sign In</a>
+        </button>
+        <button class="librarian-button">
+          <a href="librarian-signin.html">Librarian</a>
+        </button>
+      </div>
+    </nav>
+    <div class="main-content">
+      <div class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+          <h2 onclick="toggleAnswer(this)">What are the library hours?</h2>
+          <p>The library is open Monday through Friday from 9:30 AM to 4:30 PM and on weekends from 8:00 AM to 5:00 PM.</p>
+        </div>
+        <div class="faq-item">
+          <h2 onclick="toggleAnswer(this)">How can I contact a librarian?</h2>
+          <p>You can reach out to a librarian via the "Contact a Librarian" form on our website.</p>
+        </div>
+        <div class="faq-item">
+          <h2 onclick="toggleAnswer(this)">Can I borrow books online?</h2>
+          <p>Yes, registered users can borrow digital copies of select books through our online catalog.</p>
+        </div>
+        <div class="faq-item">
+          <h2 onclick="toggleAnswer(this)">Do I need a membership to access the library?</h2>
+          <p>While membership is required to borrow books, anyone can sign up and read within the library premises.</p>
+        </div>
+        <div class="faq-item">
+          <h2 onclick="toggleAnswer(this)">What is the late fee for overdue books?</h2>
+          <p>There is no late fee since this is a digital library</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleAnswer(element) {
+        const parent = element.parentElement;
+        parent.classList.toggle("active");
+      }
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+      document.onkeydown = function(e) {
+        if (e.keyCode === 123) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 'I'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 'J'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 'U'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 'C'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 'V'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'V'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'A'.charCodeAt(0)) {
+          return false;
+        }
+      };
+      document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+      });
+      document.addEventListener('copy', function(e) {
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>

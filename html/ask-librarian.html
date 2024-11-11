@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookhaven - Contact a Librarian</title>
+    <link rel="icon" type="img/icon" href="img/iconr.png">
+    <link rel="stylesheet" href="css/stylesheetr.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url('img/backgroundr.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .navbar .logo img {
+        width: 150px;
+      }
+
+      .navbar-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-links a:hover {
+        color: #007BFF;
+      }
+
+      .button-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .button-container button {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-right: 2rem;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .button-container button:hover {
+        background-color: white;
+        color: #333;
+      }
+
+      .main-content {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        padding: 4rem;
+      }
+
+      .contact-form {
+        background: linear-gradient(135deg, #5C78C0, #2B385A);
+        color: white;
+        border-radius: 30px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        max-width: 600px;
+        padding: 3rem;
+        text-align: center;
+      }
+
+      .contact-form h1 {
+        color: #FFD700;
+      }
+
+      .contact-form label {
+        display: block;
+        margin: 1rem 0 0.5rem;
+        text-align: left;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 1rem;
+      }
+
+      .contact-form button {
+        background-color: #FFD700;
+        color: #333;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-form button:hover {
+        background-color: #e6c200;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo" src="img/logor.png" width="200" height="50" />
+      </a>
+      <div class="navbar-links">
+        <a href="feature.html"> Features </a>
+        <a href="library-hours.html"> Library Hours </a>
+        <a href="help.html"> Help/FAQ </a>
+        <a href="ask-librarian.html"> Ask a Librarian</a>
+      </div>
+      <div class="button-container">
+        <button class="sign-in-button">
+          <a href="signin.html">Sign In</a>
+        </button>
+        <button class="librarian-button">
+          <a href="librarian-signin.html">Librarian</a>
+        </button>
+      </div>
+    </nav>
+    <div class="main-content">
+      <div class="contact-form">
+        <h1>Contact a Librarian</h1>
+        <form action="submit_contact.php" method="post">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+      document.onkeydown = function(e) {
+        if (e.keyCode === 123) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 'I'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 'J'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 'U'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 'C'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 'V'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'P'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'C'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'V'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'X'.charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode === 'A'.charCodeAt(0)) {
+          return false;
+        }
+      };
+      document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+      });
+      document.addEventListener('copy', function(e) {
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>
