@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('img\library-background.jpg');
+    background-size: cover;  
+    background-repeat: no-repeat;  
+    background-position: center;  
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #418ADE;
+    color: white;
+}
+
+.content-wrapper {
+    background-color: white; 
+    margin: 30px auto; 
+    padding: 50px; 
+    width: 200%; 
+    max-width: 1200px; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+nav {
+    flex: 1;
+}
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+color: #FFF;
+font-family: "Inter", sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-decoration: none;
+}
+nav ul li a:hover{
+    color:darkblue;
+}
+
+.account-head {
+    background-color: #fff;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.account-head::before {
+    content: url('img\user.png');
+    position: absolute;
+    top: 3px;
+    left: 4px;
+}
+
+.account-head::after {
+    content: url('img\arrow-down.svg');
+    position: absolute;
+    top: 14px;
+    right: 20px;
+}
+
+.account-head span {
+    font-family: Inter;
+    font-size: 20px;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.book-details {
+    margin-bottom: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    color:#418ADE;
+    text-decoration: underline;
+}
+
+
+.book-details h2 {
+    margin: 20px 0;
+}
+
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.book-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.book-list th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.book-list th {
+    background-color: #f0f0f0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #418ADE;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #155a96;
+}

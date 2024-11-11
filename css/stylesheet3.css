@@ -1,0 +1,183 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+.profile-details, .borrowed-books {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.profile-details img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.profile-details div {
+  flex: 1;
+}
+
+.profile-details button, .borrowed-books button {
+  margin-left: auto;
+}
+
+.borrowed-books ul {
+  list-style: none;
+  padding: 0;
+}
+
+.borrowed-books li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .profile-details, .borrowed-books {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-details img {
+    margin-bottom: 20px;
+  }
+
+  .profile-details button, .borrowed-books button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .borrowed-books li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('img\background.png');
+}
+
+header {
+  background-color:  #418ADE;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+nav {
+  flex: 1;
+}
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+color: #FFF;
+font-family: "Inter", sans-serif;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-decoration: none;
+}
+nav ul li a:hover{
+  color:darkblue;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+main {
+  display: flex;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+aside {
+  width: 25%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-right: 20px;
+}
+
+section {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.profile-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-details img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-details div {
+  flex: 1;
+}
+
+.profile-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-details li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.profile-details button {
+  padding: 5px 10px;
+  background-color:white;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.borrowed-books ul {
+  list-style: none;
+  padding: 0;
+}
+
+.borrowed-books li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}

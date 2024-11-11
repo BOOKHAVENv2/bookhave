@@ -1,0 +1,155 @@
+ body {
+      font-family: Arial, sans-serif;
+      padding: 0;
+      background-image: url('img\background.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      width: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      
+    }
+  
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-left: auto;
+      color: #FFF;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+    }
+
+    
+  
+  .nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      transition: color 0.3s, text-shadow 0.3s;
+  }
+  .nav :hover{
+    color: #418ADE;
+  }
+
+    .container {
+      display: flex;
+      width: 65%;
+      max-width: 790px;
+      margin: 55px auto 0; 
+ }
+
+    .login-form {
+      padding: 20px;
+      width: 300px;
+      height: 450px;
+      flex-shrink: 0;
+      border-radius: 2px;
+      background-color: white;
+
+     
+    }
+    .welcome-message{
+      width: 450px;
+      height: 450px;
+      padding: 20px;
+      background-color: #418ADE;
+      flex-shrink: 0;
+      border-radius: 2px;
+      text-align: center;
+    }
+
+    
+
+    .login-form h2, .welcome-message h2, p {
+      text-align: center;
+
+      
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      align-items: center;
+    }
+
+    input[type="email"], input[type="password"] {
+      width: 85%;
+      padding: 10px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="email"]::placeholder {
+      font-style: italic;
+      color: #888;
+    }
+
+    input[type="password"]::placeholder {
+      color: #888;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .submit{
+      width: 50%;
+      padding: 10px;
+      background-color: #418ADE;
+      cursor: pointer;
+      border-radius: 15px;
+      margin-top: 10px;
+      border-style: hidden;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #418ADE;
+      cursor: pointer;
+      border-radius: 15px;
+      margin-top: 10px;
+      border-style: hidden;
+      border: 1px solid #ccc;
+      
+    }
+
+    button.submit{
+
+      width: 30%;
+      padding: 10px;
+      background-color: #418ADE;
+      cursor: pointer;
+      border-radius: 15px;
+      margin-top: 10px;
+      border-style: hidden;
+      border: 1px solid #ccc;
+
+    }
+
+    button:hover {
+      background-color:whitesmoke ;
+      
+    }
+
+   
