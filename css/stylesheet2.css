@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  background-image: url('img\background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  .nav {
+    display: flex;
+    padding: 6.53px 13.061px;
+    align-items: center;
+    gap: 6.53px;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+  .nav a:hover{
+    color:#418ADE;
+  }
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+  .login-container {
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    padding: 25px;
+    margin-left: -10px;
+  }
+  
+  .welcome-message{
+    padding: 20px;
+    width: 300px;
+    height: 450px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    background-color: #418ADE;
+    
+  }
+  .login-form {
+    background-color: white;
+    padding: 20px;
+    width: 450px;
+    height: 450px;
+    flex-shrink: 0;
+    border-radius: 2px;
+ 
+
+  }
+  
+  .login-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    
+    
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #418ADE;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 10px;
+    border-style: hidden;
+    border: 1px solid #ccc;
+  }
+  .sub-btn{
+      width: 30%;
+      padding: 10px;
+      background-color: #418ADE;
+      cursor: pointer;
+      margin-top: 10px;
+      border-style: hidden;
+      margin-left: 85px;
+  }
+
+  button.submit {
+
+    width: 100%;
+    padding: 10px;
+    background-color: #418ADE;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: -10px;
+    border-style: hidden;
+    border: 1px solid #ccc;
+
+  }
+
+  button:hover {
+    background-color: #66a3ff;
+  }
+  
+ 
+  

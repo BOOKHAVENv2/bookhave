@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url("img\library-background.jpg");
+    background-size: cover;  
+    background-repeat: no-repeat;  
+    background-position: center;  
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    padding: 6.53px 13.061px;
+    align-items: center;
+    gap: 6.53px;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    background-color:  #418ADE;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+.content-wrapper {
+    background-color: white; 
+    margin: 30px auto; 
+    padding: 50px; 
+    width: 200%; 
+    max-width: 1200px; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+    display: flex;
+    justify-content: flex-start; /* Aligns items to the left */
+    gap: 20px;
+    padding: 0; /* Removes default padding */
+    margin-left: 0; /* Ensures there is no left margin */
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0; /* Ensures no extra margin on list items */
+}
+
+nav ul li a {
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: darkblue;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.user-icon {
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    color: #418ADE;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.book-sections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.section {
+    width: 22%;
+}
+
+.section h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.section h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section .pendings {
+    color: #418ADE;
+    text-decoration: underline;
+}
+
+.section h3 a:hover {
+    color: #418ADE;
+}
+
+.section .book-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section .book-card img {
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.book-info p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.pending {
+    display: inline-block;
+    background-color: #d3d3d3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cancel-btn {
+    background-color: #418ADE;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background-color: #0056b3;
+}
+
+.pending-books a {
+    color: #418ADE;
+}
+
+-----------------------------------
+
+.popup-modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px; 
+    max-width: 80%;
+}
+
+.popup-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.popup-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.popup {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    width: 300px;
+    max-width: 80%;
+}
+
+.popup.show {
+    display: block;
+    opacity: 1;
+}
+
+.popup.hide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
